@@ -12,6 +12,12 @@ namespace WebProject
     public interface IPrintSystem
     {
         [OperationContract]
-        void DoWork();
+        string addAmmount(string username, float quotas);
+
+        [OperationContract]
+        string transferMoney(string username, float amount);
+
+        [OperationContract]
+        string getUsername(string getUsername);
     }
 }
