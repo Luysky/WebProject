@@ -12,6 +12,8 @@ namespace WebProject
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class Service1 : IService1
     {
+
+        //TEST
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
