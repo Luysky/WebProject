@@ -11,8 +11,19 @@ namespace WebProject
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez PrintSystem.svc ou PrintSystem.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class PrintSystem : IPrintSystem
     {
-        public void DoWork()
+        public string addAmmount(string username, float quotas)
         {
+            throw new NotImplementedException();
+        }
+
+        public string getUsername(string getUsername)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string transferMoney(string username, float amount)
+        {
+            throw new NotImplementedException();
         }
     }
 }
