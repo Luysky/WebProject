@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProject", "WebProject.csproj", "{A437BFC0-5C1F-4AAB-A54D-8B7C0619B3C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO\DTO.csproj", "{2530F483-2EC6-471F-B772-E2CDD69D097E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A437BFC0-5C1F-4AAB-A54D-8B7C0619B3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A437BFC0-5C1F-4AAB-A54D-8B7C0619B3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A437BFC0-5C1F-4AAB-A54D-8B7C0619B3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2530F483-2EC6-471F-B772-E2CDD69D097E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2530F483-2EC6-471F-B772-E2CDD69D097E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2530F483-2EC6-471F-B772-E2CDD69D097E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2530F483-2EC6-471F-B772-E2CDD69D097E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
