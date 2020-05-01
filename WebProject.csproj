@@ -65,7 +65,6 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="MyData\Database1.mdf" />
     <Content Include="PrintSystem.svc" />
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
