@@ -11,6 +11,8 @@ namespace WebProject
     [ServiceContract]
     public interface IPrintSystem
     {
+
+        //test
         [OperationContract]
         string addAmmount(string username, float quotas);
 
