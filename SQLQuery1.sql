@@ -1,0 +1,2 @@
+﻿INSERT INTO Student (IdStudent,UserName,Password,Name,Firstname,Credit)
+VALUES (1,'thomasluyet@gmail.com','password','Luyet','Thomas',20),(2,'mathieukohl@gmail.com','password','Kohl','Mathieu',50),(3,'celine@sweetgirl.com','password','Darbellay','Céline',10.50),(4,'anatole@netplus.ch','password','Vitalis','Anatole',30.20);
