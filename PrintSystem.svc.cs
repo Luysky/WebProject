@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using BLL;
-using DAL;
-
+using WebBLL;
+using WebDAL;
+using WebDTO;
 
 namespace WebProject
 {
@@ -36,12 +36,16 @@ namespace WebProject
             throw new NotImplementedException();
         }
 
-        
+       
       
 
-        List<StudentDB> IPrintSystem.GetStudentById(int Id)
+        public Student GetStudentById(int Id)
         {
-            List<StudentDB> student = new List<StudentDB>();
+
+            IStudentDB studentDB = new StudentDB();
+            IStudentManager studentManager = new StudentManager(studentDB);
+
+            Student student = studentManager.GetStudentById(Id);
 
 
             return student;

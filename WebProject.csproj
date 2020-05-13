@@ -66,7 +66,6 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="PrintSystem.svc" />
-    <Content Include="Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,21 +73,7 @@
     <Compile Include="PrintSystem.svc.cs">
       <DependentUpon>PrintSystem.svc</DependentUpon>
     </Compile>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="BLL\BLL.csproj">
-      <Project>{35f7c16d-2acc-4586-a11d-59c5bcd30a94}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="DAL\DAL\DAL.csproj">
-      <Project>{86f13a50-ebd1-47ed-a074-60ff470dc182}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -97,6 +82,23 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebBLL\WebBLL.csproj">
+      <Project>{C2C921E1-5673-4A08-A026-BA60AFD1A9BC}</Project>
+      <Name>WebBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebDAL\WebDAL.csproj">
+      <Project>{4AC24277-11FE-4D6A-8C2A-AF43144F252F}</Project>
+      <Name>WebDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebDTO\WebDTO.csproj">
+      <Project>{0B4C4C07-A8F7-449D-9D64-4D4A59155F4C}</Project>
+      <Name>WebDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

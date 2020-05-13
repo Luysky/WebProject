@@ -1,10 +1,10 @@
-﻿using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WebDTO;
 
 namespace WebProject
 {
@@ -14,7 +14,7 @@ namespace WebProject
     {
 
         [OperationContract]
-        List<StudentDB> GetStudentById(int Id);
+        Student GetStudentById(int Id);
 
 
         [OperationContract]
@@ -34,35 +34,5 @@ namespace WebProject
 
     }
 
-    [DataContract]
-    public class Student
-    {
-
-        private int M_IdStudent;
-        private string M_Username;
-        private string M_Password;
-        private string M_Name;
-        private string M_Firstname;
-        private float M_Credit;
-
-
-        [DataMember]
-        public int IdStudent { get { return M_IdStudent; } set { M_IdStudent = value; } }
-
-        [DataMember]
-        public string UserName { get { return M_Username; } set { M_Username = value; } }
-
-        [DataMember]
-        public string Password { get { return M_Password; } set { M_Password = value; } }
-
-        [DataMember]
-        public string Name { get { return M_Name; } set { M_Name = value; } }
-
-        [DataMember]
-        public string Firstname { get { return M_Firstname; } set { M_Firstname = value; } }
-
-        [DataMember]
-        public float Credit { get { return M_Credit; } set { M_Credit = value; } }
-
-    }
+    
 }
