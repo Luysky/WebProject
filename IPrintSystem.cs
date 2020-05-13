@@ -13,24 +13,34 @@ namespace WebProject
     public interface IPrintSystem
     {
 
-        [OperationContract]
-        Student GetStudentById(int Id);
-
-
-        [OperationContract]
-        string addAmmount(string username, float quotas);
-
-        [OperationContract]
-        string transferMoney(string username, float amount);
-
-        [OperationContract]
-        string getUsername(string getUsername);
-
-  
+       
 
         [OperationContract]
         Student GetDataUsingDataContract(Student student);
 
+        [OperationContract]
+        Student GetStudentById(int Id);
+
+        [OperationContract]
+        Student GetStudentByUserName(string UserName);
+
+        [OperationContract]
+        int Authentification(string UserName, string Pass);
+
+        [OperationContract]
+        void AuthentificationNotification(int number);
+
+        [OperationContract]
+        string GetPassword(int id, string pass);
+
+        [OperationContract]
+        int GetIdStudent(string login);
+
+        [OperationContract]
+        double AddAmount(Student student, string UserName, double money);
+
+        [OperationContract]
+        int ConvertCredit(Student student, string UserName, string Pass);
 
     }
 
