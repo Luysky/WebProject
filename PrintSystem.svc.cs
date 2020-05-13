@@ -4,14 +4,24 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using BLL;
+using DAL;
+
 
 namespace WebProject
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "PrintSystem" à la fois dans le code, le fichier svc et le fichier de configuration.
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez PrintSystem.svc ou PrintSystem.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
+    
+    
     public class PrintSystem : IPrintSystem
     {
         public string addAmmount(string username, float quotas)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Student GetDataUsingDataContract(Student student)
         {
             throw new NotImplementedException();
         }
@@ -24,6 +34,17 @@ namespace WebProject
         public string transferMoney(string username, float amount)
         {
             throw new NotImplementedException();
+        }
+
+        
+      
+
+        List<StudentDB> IPrintSystem.GetStudentById(int Id)
+        {
+            List<StudentDB> student = new List<StudentDB>();
+
+
+            return student;
         }
     }
 }
