@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,8 +23,14 @@ namespace DTO
         public string Name { get; set; }
         [DataMember]
         public string Firstname { get; set; }
-        public float Credit{ get; set; }
+        [DataMember]
+        public float Credit{ get; set; }   
 
 
+        [DataMember]
+        public List<Student> studentList { get; set; }
     }
+
+
+ 
 }
