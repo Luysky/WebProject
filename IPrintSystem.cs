@@ -13,8 +13,6 @@ namespace WebProject
     public interface IPrintSystem
     {
 
-       
-
         [OperationContract]
         Student GetDataUsingDataContract(Student student);
 
@@ -42,7 +40,26 @@ namespace WebProject
         [OperationContract]
         int ConvertCredit(Student student, string UserName, string Pass);
 
+        [OperationContract]
+        Student AuthenficationUser(string UserName);
+
+        [OperationContract]
+        int UpdateTransaction(Student student, double mouve);
+
+        [OperationContract]
+        List<Test> GetTransactionById(int id);
+
+        /*
+        [OperationContract]
+        double GetMovement(Test transa);
+        */
+
+        /*
+       [OperationContract]
+       void PrintTransactionList(Test[] test);
+       */
+
     }
 
-    
+
 }

@@ -74,6 +74,17 @@ namespace WebProject
             return student;
         }
 
+        public Student AuthenficationUser(string UserName)
+        {
+            IStudentDB studentDB = new StudentDB();
+            IStudentManager studentManager = new StudentManager(studentDB);
+
+            Student student = studentManager.GetStudentByUserName(UserName);
+
+            return student;
+
+        }
+
 
 
         public int Authentification(string UserName, string Pass)
@@ -149,6 +160,58 @@ namespace WebProject
 
         }
 
+        public int UpdateTransaction(Student student, double mouve)
+        {
+            IStudentDB studentDB = new StudentDB();
+            IStudentManager studentManager = new StudentManager(studentDB);
+
+            ITransactionDB transactionDB = new TransactionDB();
+            ITransactionManager transactionManager = new TransactionManager(transactionDB);
+
+            return transactionManager.UpdateTransaction(student, mouve);
+
+        }
+
+        public List<Test> GetTransactionById(int id)
+        {
+            ITransactionDB transactionDB = new TransactionDB();
+            ITransactionManager transactionManager = new TransactionManager(transactionDB);
+
+
+            return transactionManager.GetTransactionById(id);
+        }
+
+
+        /*
+     public void PrintTransactionList(Test[] test)
+     {
+        Console.WriteLine("Salut ");
+         int count = 0;
+
+         foreach (Test testPrint in test)
+         {
+             Test i = testPrint;
+
+             double argent = i.Mouvement;
+
+             count++;
+             Console.WriteLine($"Transaction nr. #{count}: {argent}");
+         }
+     }
+     */
+
+
+        /*
+        public double GetMovement(Test transa)
+        {
+            ITransactionDB transactionDB = new TransactionDB();
+            ITransactionManager transactionManager = new TransactionManager(transactionDB);
+
+            double mouvement = transactionManager.GetTransactionById(transa.IdTransaction).Mouvement;
+
+            return mouvement;
+        }
+        */
 
     }
 }
